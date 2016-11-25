@@ -1,0 +1,19 @@
+{
+  "name": "Export reviews",
+  "description": "Download csv review",
+  "version": "1.0",
+  "browser_action": {
+      "default_title": "Export reviews",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2,
+	"content_scripts": [{
+		"js": [
+			"jquery.js",
+			"date.js",
+			"run.js"
+		],
+		"matches": ["*://*.feedback.aliexpress.com/*"]
+	}]
+}
