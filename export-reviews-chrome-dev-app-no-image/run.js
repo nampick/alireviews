@@ -38,13 +38,11 @@ if(urlNeed){
 		jQuery('.r-photo-list .pic-view-item',this).each(function(){ 
 			img += '{'+$(this).attr('data-src')+'};';
 		});
-		if(star > 3 && contentl.length > 3){
-			csv += urlNeed+','+star+','+jQuery.trim(jQuery('.user-order-info .first',this).text().replace(/(<([^>]+)>)/ig,"")).replace(/\s/g,'')+','+jQuery.trim(jQuery('.user-name',this).text())+',sale@mobilecase.store,"'+jQuery.trim(jQuery('.buyer-feedback',this).text().replace(/[\t\n]+/g,' '))'",'+date.toString('MM/dd/yy')+'\n';		
+		if(star > 3 && content.length > 3){
+			csv += urlNeed+','+star+','+jQuery.trim(jQuery('.user-order-info .first',this).text().replace(/(<([^>]+)>)/ig,"")).replace(/\s/g,'')+','+jQuery.trim(jQuery('.user-name',this).text())+',sale@mobilecase.store,"'+content+'@'+img+'",'+date.toString('MM/dd/yy')+'\n';		
 		}
 	
 	});
 	download(csv, 'csv file.csv', 'text/csv');	
 	$('#l-refresh-form').attr('action',$('#l-refresh-form').attr('action')+'@'+urlNeed);
 }
-
-
