@@ -39,7 +39,7 @@ if(urlNeed){
 			img += '{'+$(this).attr('data-src')+'};';
 		});
 		if(star > 3 && content.length > 3){
-			csv += urlNeed+','+star+','+jQuery.trim(jQuery('.user-order-info .first',this).text().replace(/(<([^>]+)>)/ig,"")).replace(/\s/g,'')+','+jQuery.trim(jQuery('.user-name',this).text())+',sale@mobilecase.store,"'+content+'@'+img+'",'+date.toString('MM/dd/yy')+'\n';		
+			csv += urlNeed+','+star+','+jQuery.trim(jQuery('.user-order-info .first',this).text().replace(/(<([^>]+)>)/ig,"")).replace(/\s/g,'')+','+jQuery.trim(jQuery('.user-name',this).text())+',sale@mobilecase.store,"'+content+'",'+date.toString('MM/dd/yy')+'\n';		
 		}
 	
 	});
